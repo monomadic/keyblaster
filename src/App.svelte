@@ -1,12 +1,13 @@
 <script>
-  import Home from "@/components/Home.svelte";
-  import { fade } from "svelte/transition";
+  import Account from './components/Account.svelte';
 
-  let name = "World";
+  for (let index = 0; index < 10; index++) {}
 </script>
 
-<main transition:fade>
-  <Home {name} />
+<main>
+  {#each Array.from(Array(50).keys()) as index}
+    <Account />
+  {/each}
 </main>
 
 <style>
